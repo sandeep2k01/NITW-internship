@@ -18,12 +18,6 @@ Rather than visiting dozens of different websites, students can visit this porta
 
 ---
 
-## 📸 Screenshots
-
-> *(Add screenshots of your homepage, scholarship category pages, and announcement section here)*
-
----
-
 ## ✨ Features
 
 ### 🏠 Home Page
