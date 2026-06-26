@@ -14,7 +14,7 @@ Rather than visiting dozens of different websites, students can visit this porta
 
 ## 🌐 Live Demo
 
-> *(Deploy link here — e.g., GitHub Pages / Netlify)*
+🔗 **[https://scholarshiphub-nine.vercel.app/](https://scholarshiphub-nine.vercel.app/)**
 
 ---
 
@@ -92,16 +92,25 @@ Step-by-step scholarship application workflow outlining responsibilities of:
 ## 📁 Project Structure
 
 ```
-scholarship-hub/
+NITW-internship/
 │
-├── index.html          # Home page
-├── international.html  # International scholarships page
-├── national.html       # National scholarships page
-├── state.html          # State scholarships page
-├── private.html        # Private scholarships page
+├── index.html               # Home page
+├── international.html       # International scholarships page
+├── national.html            # National scholarships page
+├── state1.html              # State scholarships page
+├── private1.html            # Private scholarships page
+├── scholarship-status.html  # Scholarship status tracker
+├── faq.html                 # FAQs page
+├── contact.html             # Contact page
 │
-├── style.css           # Global stylesheet (themes, layout, components)
-└── script.js           # JavaScript (theme toggle, slider, scroll interactions)
+├── styles.css               # Global stylesheet (themes, layout, components)
+├── script.js                # JavaScript (theme toggle, slider, scroll interactions)
+│
+├── logo1.png                # Site logo
+├── Digital-India-Color.svg  # Digital India banner
+├── slide11.jpg, final2.jpg, final3.jpg  # Image slider banners
+├── modi.png                 # About section image
+└── facebook2.png, twitterx.png, linkedin.png, instagram.png  # Social icons
 ```
 
 ---
@@ -114,12 +123,12 @@ This is a static website. No build tools or package managers are required.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/scholarship-hub.git
+   git clone https://github.com/sandeep2k01/NITW-internship.git
    ```
 
 2. **Navigate to the project folder:**
    ```bash
-   cd scholarship-hub
+   cd NITW-internship
    ```
 
 3. **Open in browser:**
