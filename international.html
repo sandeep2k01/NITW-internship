@@ -3,38 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarship Hub</title>
+    <meta name="description" content="Explore International Scholarships — Fulbright, Chevening, DAAD, Australia Awards and more.">
+    <title>Scholarship Hub | International Scholarships</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-      
-
-
-        <header>
-            <div class="top-bar">
-                <div class="gov-info">Government of India | Ministry of Electronics & Information Technology | <img src="Digital-India-Color.svg"></div>
-              
-                <div class="language">
-                    <select id="languageSelect" onchange="changeLanguage()">
-                        <option value="en">English</option>
-                        <option value="hi">हिंदी</option>
-                        <option value="te">తెలుగు</option>
-                        <!-- Add more languages as needed -->
-                    </select>
-                </div>
-            </div>
-            
-       
-
+        <div class="top-bar">
+            <div class="gov-info">Government of India | Ministry of Electronics &amp; Information Technology | <img src="Digital-India-Color.svg" alt="Digital India"></div>
+            <div id="google_translate_element" class="language-translator"></div>
+        </div>
         <nav class="navbar">
             <div class="logo">
                 <img src="logo1.png" alt="Scholarship Hub Logo">
             </div>
-            <ul>
+<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+<span></span><span></span><span></span>
+</button>
+<ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Scholarship Types</a>
@@ -45,159 +34,76 @@
                         <a href="private1.html">Private</a>
                     </div>
                 </li>
-                <li><a href="scholarship status state.html">Scholarship Status</a></li>
-                <li><a href="#">Announcements</a></li>
+                <li><a href="scholarship-status.html">Scholarship Status</a></li>
+                <li><a href="index.html#announcements">Announcements</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Helpdesk</a>
                     <div class="dropdown-content">
-                        <a href="#">FAQs</a>
-                        <a href="#">Contact</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="contact.html">Contact</a>
                     </div>
                 </li>
             </ul>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button>Search</button>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search scholarships...">
+                <button id="search-button">Search</button>
+                <div class="search-results" id="search-results"></div>
             </div>
         </nav>
-        
     </header>
-    <center>
+
+    <main>
         <div class="image-scroller">
             <div class="images">
-                <img src="slide11.jpg" alt="Image 1">
-                <img src="final2.jpg" alt="Image 2">
-                <img src="final3.jpg" alt="Image 3">
-                <!-- Add more images as needed -->
+                <img src="slide11.jpg" alt="Scholarship Banner 1">
+                <img src="final2.jpg" alt="Scholarship Banner 2">
+                <img src="final3.jpg" alt="Scholarship Banner 3">
             </div>
         </div>
-    </center>
-   
-    <main>
+
         <section class="scholarship-selection">
             <h2>International Scholarships</h2>
-            <form id="scholarship-form">
+            <p>Select a scholarship program to visit its official portal.</p>
+            <form id="scholarship-form" onsubmit="event.preventDefault(); redirectInternational();">
                 <select id="scholarship-select">
-                    <option value="fulbright">Fulbright Scholarships</option>
-                    <option value="chevening">Chevening Scholarships</option>
-                    <option value="daad">DAAD Scholarships</option>
+                    <option value="">-- Select Scholarship --</option>
+                    <option value="fulbright">Fulbright Scholarships (USA)</option>
+                    <option value="chevening">Chevening Scholarships (UK)</option>
+                    <option value="daad">DAAD Scholarships (Germany)</option>
                     <option value="australia_awards">Australia Awards Scholarships</option>
                     <option value="new_zealand_aid">New Zealand Aid Programme</option>
-                    <!-- Add more international scholarships here -->
                 </select>
-                <button type="submit">Go</button>
+                <button type="submit">Go to Portal</button>
             </form>
         </section>
     </main>
-    <br>
-    <br>
-    
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section contact-us">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
-            <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="footer-section about">
-            <h3>About</h3>
-            <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
-        </div>
-        <div class="footer-section follow-us">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="facebook2.png" alt="Facebook" /></a>
-                <a href="#"><img src="twitterx.png" alt="Twitter" /></a>
-                <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
-                <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section about">
+                <h3>About</h3>
+                <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook2.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitterx.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
-    </div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,hi,te,ta,ml,kn',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
-        }
-      </script>
-      <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,hi,te,ta,ml,kn',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-          }, 'google_translate_element');
-        }
-      </script>
-    
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
+        </div>
+    </footer>
 
-    
-        
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const imagesContainer = document.querySelector('.images');
-            const images = Array.from(imagesContainer.children);
-            let index = 0;
-        
-            function scrollImages() {
-                index = (index + 1) % images.length;
-                imagesContainer.style.transform = `translateX(-${index * 100}%)`;
-            }
-        
-            setInterval(scrollImages, 3000); // Change image every 3 seconds
-        });
-        document.getElementById('scholarship-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            var select = document.getElementById('scholarship-select');
-            var selectedValue = select.value;
-            var url = '';
-
-            switch (selectedValue) {
-                case 'fulbright':
-                    url = 'https://foreign.fulbrightonline.org/';
-                    break;
-                case 'chevening':
-                    url = 'https://www.chevening.org/';
-                    break;
-                case 'daad':
-                    url = 'https://www.daad.de/en/';
-                    break;
-                case 'australia_awards':
-                    url = 'https://www.dfat.gov.au/people-to-people/australia-awards';
-                    break;
-                case 'new_zealand_aid':
-                    url = 'https://www.mfat.govt.nz/en/aid-and-development/new-zealand-government-scholarships/';
-                    break;
-                // Add more cases here
-                default:
-                    url = '#';
-            }
-
-            window.location.href = url;
-        });
-         // Get the select element
-         const selectElement = document.getElementById('websiteSelect');
-
-         // Add an event listener for the change event
-         selectElement.addEventListener('change', function() {
-             // Get the selected value
-             const selectedValue = selectElement.value;
- 
-             // Check if a valid option is selected
-             if (selectedValue) {
-                 // Open the selected URL in a new tab
-                 window.open(selectedValue, '_blank');
-             }
-         });
-    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

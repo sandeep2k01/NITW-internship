@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarship Hub</title>
+    <meta name="description" content="Scholarship Hub - Centralized portal to discover International, National, State and Private scholarships for Indian students.">
+    <title>Scholarship Hub | Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <script src="script.js" defer></script>
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <div class="top-bar">
-            <div class="gov-info">Government of India | Ministry of Electronics & Information Technology | <img src="Digital-India-Color.svg"></div>
-          
-          
-            
+            <div class="gov-info">Government of India | Ministry of Electronics &amp; Information Technology | <img src="Digital-India-Color.svg" alt="Digital India"></div>
+            <div id="google_translate_element" class="language-translator"></div>
         </div>
-        
-        <div id="google_translate_element" class="language-translator"></div>
-
-
-
-
-
-
         <nav class="navbar">
             <div class="logo">
                 <img src="logo1.png" alt="Scholarship Hub Logo">
             </div>
-            <ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Scholarship Types</a>
@@ -42,7 +34,7 @@
                         <a href="private1.html">Private</a>
                     </div>
                 </li>
-                <li><a href="scholarship status state.html">Scholarship Status</a></li>
+                <li><a href="scholarship-status.html">Scholarship Status</a></li>
                 <li><a href="#announcements">Announcements</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Helpdesk</a>
@@ -55,162 +47,126 @@
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search scholarships...">
                 <button id="search-button">Search</button>
-                <div class="search-results" id="search-results">
+                <div class="search-results" id="search-results"></div>
             </div>
-        </div>
-        
         </nav>
     </header>
 
     <main>
-        <center>
-            <div class="image-scroller">
-                <div class="images">
-                    <img src="slide11.jpg" alt="Image 1">
-                    <img src="final2.jpg" alt="Image 2">
-                    <img src="final3.jpg" alt="Image 3">
-                    <!-- Add more images as needed -->
-                </div>
+        <!-- Image Slider -->
+        <div class="image-scroller">
+            <div class="images">
+                <img src="slide11.jpg" alt="Scholarship Banner 1">
+                <img src="final2.jpg" alt="Scholarship Banner 2">
+                <img src="final3.jpg" alt="Scholarship Banner 3">
             </div>
-        </center>
-    </div>
+        </div>
+
+        <!-- Scholarship Category Cards -->
         <section class="scholarship-types">
-            <h2></h2>
+            <h2>Explore Scholarships</h2>
             <div class="card-container">
                 <div class="card">
-                    
                     <h3>International Scholarships</h3>
-                    <p>Details about international scholarships.</p>
-                    <button onclick="location.href='international.html'">Click</button>
+                    <p>Explore study abroad and foreign-funded scholarship opportunities.</p>
+                    <button onclick="location.href='international.html'">Explore</button>
                 </div>
                 <div class="card">
                     <h3>National Scholarships</h3>
-                    <p>Details about national scholarships.</p>
-                    <button onclick="location.href='national.html'">Click</button>
+                    <p>Government of India funded scholarships — UGC, AICTE, INSPIRE &amp; more.</p>
+                    <button onclick="location.href='national.html'">Explore</button>
                 </div>
                 <div class="card">
-                    <h3>State Sector : Scholarships</h3>
-                    <p>Details about state scholarships.</p>
-                    <button onclick="location.href='state1.html'">Click</button>
+                    <h3>State Scholarships</h3>
+                    <p>State-specific post-matric and merit-based scholarship programs.</p>
+                    <button onclick="location.href='state1.html'">Explore</button>
                 </div>
                 <div class="card">
-                    <h3>Private Sector : Scholarships</h3>
-                    <p>Details about private scholarships.</p>
-                    <button onclick="location.href='private1.html'">Click</button>
+                    <h3>Private Scholarships</h3>
+                    <p>Corporate and NGO-funded scholarship opportunities across India.</p>
+                    <button onclick="location.href='private1.html'">Explore</button>
                 </div>
             </div>
         </section>
 
-        <br>
-        <center>
-        <section class="centered-section ">
-           
-                <div class="type-1">
-                   <div class="type-2">
-                       <img src="modi.png" alt="About Image">
-                   </div>
-                   <div class="content-container">
-                       <div class="type-3">
-                           <h2>About Our Scholarship Program</h2>
-                           <p>Welcome to NASS, the premier platform for scholarship assistance. Our commitment lies in assisting students from diverse backgrounds in securing the financial assistance necessary to pursue their educational aspirations. Our repository encompasses a diverse array of scholarships, spanning national, international, state-based, and private funding sources, ensuring that every student can discover the ideal financial support for their academic pursuits.</p>
-                       </div>
-                   </div>
-               </div>
-       
-         
-        <div class="type-4">
-            <div class="card-5">
-                <div class="pin left"></div>
-                <h2><img src="" alt="" width="30"> Time Line</h2>
-                <marquee id="marquee-1" direction="up">
-
-                <p><h3>Role of Students:</h3></p>
-                    Submission of Application with relevant Documents at college with 15 days of Admission.
-                    Aadhar biometric Authentication at Meeseva.</p>
-                   <p> <h3>Role of College/Prinipal:</h3></p>
-                    Verify the students application and forward to biometric authentication
-                    Attendance
-                    Local or Non Local
-                    Bonafide
-                   Discontinued/Regular
-                    Submission of Signed Barcode hardcopy at district office with Relevant Documents
-                    Submission of Utilization certificates of sanctioned students to district Welfare officer within 15 days of RTF credited,</p>
-                   <p><h3> District Officer:</h3></p>
-                    Sanctioned and release of MTF and RTF
-                    .</p>
-          
+        <!-- About Section -->
+        <section class="centered-section">
+            <div class="type-1">
+                <div class="type-2">
+                    <img src="modi.png" alt="About Our Program">
+                </div>
+                <div class="content-container">
+                    <div class="type-3">
+                        <h2>About Our Scholarship Program</h2>
+                        <p>Welcome to NASS, the premier platform for scholarship assistance. Our commitment lies in assisting students from diverse backgrounds in securing the financial assistance necessary to pursue their educational aspirations. Our repository encompasses a diverse array of scholarships, spanning national, international, state-based, and private funding sources, ensuring that every student can discover the ideal financial support for their academic pursuits.</p>
+                    </div>
+                </div>
             </div>
-        </marquee>
-    
-        
-           
+
+            <!-- Timeline Section -->
+            <div class="type-4">
+                <div class="card-5">
+                    <div class="pin left"></div>
+                    <h2>Application Timeline</h2>
+                    <marquee id="marquee-1" direction="up">
+                        <h3>Role of Students:</h3>
+                        <p>Submission of Application with relevant Documents at college within 15 days of Admission. Aadhar biometric Authentication at Meeseva.</p>
+                        <h3>Role of College / Principal:</h3>
+                        <p>Verify the student's application and forward to biometric authentication. Check Attendance, Local or Non-Local status, Bonafide, Discontinued/Regular. Submit Signed Barcode hardcopy at district office with Relevant Documents. Submit Utilization certificates of sanctioned students to district Welfare officer within 15 days of RTF credited.</p>
+                        <h3>District Officer:</h3>
+                        <p>Sanctioned and release of MTF and RTF.</p>
+                    </marquee>
+                </div>
             </div>
         </section>
-    </center>
     </main>
+
+    <!-- Announcements Section -->
     <section id="announcements" class="type-8">
         <div class="container1">
-    
-            <header>
-                <h1>ANNOUNCEMENTS</h1>
-            </header>
+            <div class="section-title">
+                <h2>Announcements</h2>
+            </div>
             <section class="content1">
                 <div class="column" id="phd-seminars">
-                    <h2>Up Coming Announcement</h2>
+                    <h2>Upcoming Announcements</h2>
                     <div class="box-1">
                         <div class="seminar">
-                           
                             <div class="seminar-details">
-                                <div id="includedContent"></div>
                                 <ul>
-                                    <li>Online scholarship applications for SC, ST, and OBC students studying outside the state of Chhattisgarh for the academic year 2023-24 will be invited from 15/03/2024 to 04/04/2024.</li>
-                                    <li>All students are requested to please check the status of Aadhar Authentication (e-KYC) by your login.</li>
-                                    <li>Online scholarship applications for SC, ST, and OBC students</li>
-                                    <li>A Study on The Performance and Bond Behaviour of High Strength Geopolymer Concrete</li>
-                                    <li>Studying outside the state of Chhattisgarh for the academic year 2023-24 scholarship will be invited from 15/03/2024 to 04/04/2024.</li>
-                                  </ul>
-                                  
-                                <script>
-                                    // JavaScript to load content from another file
-                                    fetch('output.html')
-                                        .then(response => response.text())
-                                        .then(data => {
-                                            document.getElementById('includedContent').innerHTML = data;
-                                        })
-                                        .catch(error => console.error('Error loading content:', error));
-                                </script>
+                                    <li>Online scholarship applications for SC, ST, and OBC students studying outside Chhattisgarh for AY 2023-24 will be invited from 15/03/2024 to 04/04/2024.</li>
+                                    <li>All students are requested to check the status of Aadhar Authentication (e-KYC) by your login.</li>
+                                    <li>Online scholarship applications for SC, ST, and OBC students studying outside the state.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br>
+
                 <div class="column" id="recent-publications">
-                    <h2>Currently Announcement</h2>
+                    <h2>Current Announcements</h2>
                     <div class="box-2">
-                        <marquee id="marquee-2" direction="up"> 
-                        <p>Scholarship Application Fresh & Renewal is open for AY 2024-25.</p>
-                        <p>The Portal is open for One Time Registration (OTR) for students. <a href="https://scholarships.gov.in/otrapplication/#/login-page" class="button">Apply Now!</a></p>
-                        <p>One Time Registration (OTR) is a unique number allotted to the student and is applicable for the entire academic career on National Scholarship Portal.</p>
-                        <p>OTR is required to apply for the scholarships on National Scholarship Portal from AY 2024-25.</p>
-                        <p>OTR can be generated using Aadhaar/Aadhaar Enrollment number (EID)</p>
-                        <p>abc</p>
-                    </div>
-                    </marquee>
+                        <marquee id="marquee-2" direction="up">
+                            <p>Scholarship Application Fresh &amp; Renewal is open for AY 2024-25.</p>
+                            <p>The Portal is open for One Time Registration (OTR) for students. <a href="https://scholarships.gov.in/otrapplication/#/login-page" class="button" target="_blank">Apply Now!</a></p>
+                            <p>One Time Registration (OTR) is a unique number allotted to the student and is applicable for the entire academic career on National Scholarship Portal.</p>
+                            <p>OTR is required to apply for scholarships on National Scholarship Portal from AY 2024-25.</p>
+                            <p>OTR can be generated using Aadhaar / Aadhaar Enrollment number (EID).</p>
+                        </marquee>
                     </div>
                 </div>
-                <br>
+
                 <div class="column" id="sponsored-projects">
                     <h2>Previous Announcements</h2>
                     <div class="box-3">
                         <div class="type-9">
                             <marquee id="marquee-3" direction="up">
-                        <p>Government sanction new scheme Incentives for Civil Services</p>
-                        <p>Examination to provide financial assistance as cash incentive to the aspirants of socially, educationally and economically weaker/backward sections of Andhra Pradesh, who qualified in the Preliminary and Mains Civil Services Examination conducted by the UPSC for an amount of Rs.1 lakh and Rs.50,000 respectively in order to increase the representation of A.P in the Civil Services.</p>
-                        <p>Registration Closed</p>
-                        <p>Print Registered Application <a href="https://jcsp.apcfss.in/Getapplication" class="button">Click Here!</a></p>
-                        <p>The students who have applied on National Scholarship Portal in AY 2023-24 will be allotted the OTR/Reference number through the portal and intimated through SMS. For more details <button>Click Here</button></p>
-                        <p>NSP OTR App is available on Google Play Store.</p>
-                        </marquee>
+                                <p>Government announced new scheme — Incentives for Civil Services Examination to provide financial assistance to aspirants from socially, educationally and economically weaker sections of Andhra Pradesh.</p>
+                                <p>Qualified candidates in Preliminary and Mains Civil Services Exam conducted by UPSC receive Rs.1 lakh and Rs.50,000 respectively.</p>
+                                <p>Registration Closed. <a href="https://jcsp.apcfss.in/Getapplication" class="button" target="_blank">Print Registered Application</a></p>
+                                <p>Students who applied on NSP in AY 2023-24 will be allotted the OTR/Reference number through the portal via SMS.</p>
+                                <p>NSP OTR App is available on Google Play Store.</p>
+                            </marquee>
                         </div>
                     </div>
                 </div>
@@ -218,79 +174,33 @@
         </div>
     </section>
 
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section contact-us">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
-            <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="footer-section about">
-            <h3>About</h3>
-            <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
-        </div>
-        <div class="footer-section follow-us">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="facebook2.png" alt="Facebook" /></a>
-                <a href="#"><img src="twitterx.png" alt="Twitter" /></a>
-                <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
-                <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section about">
+                <h3>About</h3>
+                <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook2.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitterx.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
-    </div>
-    
-      
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      
-    
-</footer>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,hi,te,ta,ml,kn',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-    document.querySelector('.marquee a').addEventListener('click', function(event) {
-        event.stopPropagation(); // This will prevent the marquee from pausing
-    });
-       // Function to stop all marquees
-    function stopAllMarquees() {
-        document.querySelectorAll('marquee').forEach(function(marquee) {
-            marquee.stop();
-        });
-    }
+        <div class="footer-bottom">
+            <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
+        </div>
+    </footer>
 
-   
-  </script>
-  <script>
-     // Function to start all marquees
-     function startAllMarquees() {
-        document.querySelectorAll('marquee').forEach(function(marquee) {
-            marquee.start();
-        });
-    }
-
-    // Get the container element
-    var container = document.querySelector('.container1');
-
-    // Add event listeners to the container
-    container.addEventListener('mouseover', function() {
-        stopAllMarquees();
-    });
-
-    container.addEventListener('mouseout', function() {
-        startAllMarquees();
-    });
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

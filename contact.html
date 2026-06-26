@@ -3,36 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarship Hub</title>
-    
-    <link rel="stylesheet" href="contact.css">
+    <meta name="description" content="Contact Scholarship Hub — reach out for support, queries or feedback.">
+    <title>Scholarship Hub | Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <script src="script.js" defer></script>
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <div class="top-bar">
-            <div class="gov-info">Government of India | Ministry of Electronics & Information Technology | <img src="Digital-India-Color.svg"></div>
-          
-          
-            
+            <div class="gov-info">Government of India | Ministry of Electronics &amp; Information Technology | <img src="Digital-India-Color.svg" alt="Digital India"></div>
+            <div id="google_translate_element" class="language-translator"></div>
         </div>
-        
-        <div id="google_translate_element" class="language-translator"></div>
-
-
-
-
-
-
         <nav class="navbar">
             <div class="logo">
                 <img src="logo1.png" alt="Scholarship Hub Logo">
             </div>
-            <ul>
+<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+<span></span><span></span><span></span>
+</button>
+<ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Scholarship Types</a>
@@ -43,8 +34,8 @@
                         <a href="private1.html">Private</a>
                     </div>
                 </li>
-                <li><a href="scholarship status state.html">Scholarship Status</a></li>
-                <li><a href="#">Announcements</a></li>
+                <li><a href="scholarship-status.html">Scholarship Status</a></li>
+                <li><a href="index.html#announcements">Announcements</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Helpdesk</a>
                     <div class="dropdown-content">
@@ -56,93 +47,66 @@
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search scholarships...">
                 <button id="search-button">Search</button>
-                <div class="search-results" id="search-results">
+                <div class="search-results" id="search-results"></div>
             </div>
-        </div>
-        
         </nav>
     </header>
 
     <main>
-        <center>
-            <div class="image-scroller">
-                <div class="images">
-                    <img src="slide11.jpg" alt="Image 1">
-                    <img src="final2.jpg" alt="Image 2">
-                    <img src="final3.jpg" alt="Image 3">
-                    <!-- Add more images as needed -->
+        <div class="content">
+            <h1>Contact Us</h1>
+            <div class="contact-section">
+                <p>If you have any questions or need support, feel free to reach out through the details below.</p>
+                <div class="card">
+                    <h3><i class="fa fa-envelope"></i> Email</h3>
+                    <p><a href="mailto:support@scholarshipportal.com">support@scholarshipportal.com</a></p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa fa-phone"></i> Phone</h3>
+                    <p>+123 456 7890</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa fa-map-marker"></i> Address</h3>
+                    <p>National Institute of Technology Warangal, Warangal, Telangana - 506004</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa fa-share-alt"></i> Social Media</h3>
+                    <p>Follow us on:
+                        <a href="#">Facebook</a>,
+                        <a href="#">Twitter</a>,
+                        <a href="#">Instagram</a>
+                    </p>
                 </div>
             </div>
-        </center>
-        <br>
-    <div class="content">
-        <h1>Contact Us</h1>
-        <div class="contact-section">
-            <p>If you have any questions, feel free to reach out to us through the following contact details:</p>
-            <div class="card">
-                <h3>Email</h3>
-                <p>support@scholarshipportal.com</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
+                <p>Phone: +123 456 7890</p>
             </div>
-            <div class="card">
-                <h3>Phone</h3>
-                <p>+123 456 7890</p>
+            <div class="footer-section about">
+                <h3>About</h3>
+                <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
             </div>
-            <div class="card">
-                <h3>Address</h3>
-                <p>123 Scholarship Lane, Education City, Knowledge State, 456789</p>
-            </div>
-            
-            </div>
-            <div class="card">
-                <h3>Social Media</h3>
-                <p>Follow us on:
-                    <a href="#">Facebook</a>,
-                    <a href="#">Twitter</a>,
-                    <a href="#">Instagram</a>
-                </p>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook2.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitterx.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
             </div>
         </div>
-    </div>
-    
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section contact-us">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
-            <p>Phone: +123 456 7890</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
         </div>
-        <div class="footer-section about">
-            <h3>About</h3>
-            <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
-        </div>
-        <div class="footer-section follow-us">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="facebook2.png" alt="Facebook" /></a>
-                <a href="#"><img src="twitterx.png" alt="Twitter" /></a>
-                <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
-                <a href="#"><img src="instagram.png" alt="Instagram" /></a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
-    </div>
-    
-      
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,hi,te,ta,ml,kn',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-          }, 'google_translate_element');
-        }
-      </script>
-    
-</footer>
+    </footer>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

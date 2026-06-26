@@ -3,34 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarship Hub</title>
+    <meta name="description" content="Explore State Scholarships — Find scholarship portals for all Indian states and union territories.">
+    <title>Scholarship Hub | State Scholarships</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <header>
-            <div class="top-bar">
-                <div class="gov-info">Government of India | Ministry of Electronics & Information Technology | <img src="Digital-India-Color.svg"></div>
-              
-                <div class="language">
-                    <select id="languageSelect" onchange="changeLanguage()">
-                        <option value="en">English</option>
-                        <option value="hi">हिंदी</option>
-                        <option value="te">తెలుగు</option>
-                        <!-- Add more languages as needed -->
-                    </select>
-                </div>
-            </div>
-            
+        <div class="top-bar">
+            <div class="gov-info">Government of India | Ministry of Electronics &amp; Information Technology | <img src="Digital-India-Color.svg" alt="Digital India"></div>
+            <div id="google_translate_element" class="language-translator"></div>
+        </div>
         <nav class="navbar">
             <div class="logo">
                 <img src="logo1.png" alt="Scholarship Hub Logo">
-                <div class="navigation-links"></div>
             </div>
-            <ul>
+<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+<span></span><span></span><span></span>
+</button>
+<ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Scholarship Types</a>
@@ -41,8 +34,8 @@
                         <a href="private1.html">Private</a>
                     </div>
                 </li>
-                <li><a href="scholarship status state.html">Scholarship Status</a></li>
-                <li><a href="#">Announcements</a></li>
+                <li><a href="scholarship-status.html">Scholarship Status</a></li>
+                <li><a href="index.html#announcements">Announcements</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Helpdesk</a>
                     <div class="dropdown-content">
@@ -51,384 +44,97 @@
                     </div>
                 </li>
             </ul>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button>Search</button>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search scholarships...">
+                <button id="search-button">Search</button>
+                <div class="search-results" id="search-results"></div>
             </div>
         </nav>
     </header>
-    
+
     <main>
-        
-
-  </section>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f4f4f4;
-        padding: 20px;
-    }
-
-    .scholarship-selection {
-        background-color: #ff9999;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    .scholarship-selection h2 {
-        font-size: 24px;
-        color: #333;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    #scholarshipForm {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #stateSelector {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        width: 100%;
-        transition: border-color 0.3s ease;
-    }
-
-    #stateSelector:focus {
-        border-color: #007bff;
-        outline: none;
-    }
-
-    button[type="button"] {
-        padding: 10px;
-        background-color: #007bff;
-        border: none;
-        border-radius: 4px;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    button[type="button"]:hover {
-        background-color: #0056b3;
-    }
-    .faq {
-        margin: 40px 0;
-    }
-    
-    .faq h2 {
-        text-align: center;
-        color: #4b0082;
-    }
-    details {
-        background-color: #e0ffff;
-        border-radius: 10px;
-        margin: 10px 0;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    details summary {
-        font-size: 18px;
-        cursor: pointer;
-    }
-    
-/* Footer Styling */
-footer {
-    background-color: #004D99;
-    color: yellow;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
-
-.footer-section h3 {
-    margin-bottom: 10px;
-}
-
-.footer-section a {
-    color: yellow;
-    text-decoration: none;
-}
-
-.footer-section .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.footer-section .social-icons a img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
-}
-
-.footer-section .social-icons a img:hover {
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    border-top: 1px solid yellow;
-    padding-top: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-section .social-icons {
-        justify-content: flex-start;
-    }
-}
-html, body {
-    height: 100%; /* Ensure full height */
-    margin: 0; /* Remove default margin */
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Make container at least full height */
-}
-
-main {
-    flex: 1; /* Allow main to grow */
-    padding: 20px; /* Add padding to main content */
-}
-
-footer {
-   
-   
-    text-align: center; /* Center text */
-    padding: 20px; /* Padding */
-}
-
-</style>
-<body style="background-color: #d5e8e6;">
-    <center>
         <div class="image-scroller">
             <div class="images">
-                <img src="slide11.jpg" alt="Image 1">
-                <img src="final2.jpg" alt="Image 2">
-                <img src="final3.jpg" alt="Image 3">
-                <!-- Add more images as needed -->
+                <img src="slide11.jpg" alt="Scholarship Banner 1">
+                <img src="final2.jpg" alt="Scholarship Banner 2">
+                <img src="final3.jpg" alt="Scholarship Banner 3">
             </div>
         </div>
-    </center>
-    <br>
-    <br>
-    <center>
-        <div class="scholarship-selection">
-    <h2>Select Your State/Union Territory to Get Scholarship Information</h2>
-    <form id="scholarshipForm">
-        <select id="stateSelector">
-            <option value="">--Select State/UT--</option>
-            <option value="andhra-pradesh">Andhra Pradesh</option>
-            <option value="arunachal-pradesh">Arunachal Pradesh</option>
-            <option value="assam">Assam</option>
-            <option value="bihar">Bihar</option>
-            <option value="chhattisgarh">Chhattisgarh</option>
-            <option value="goa">Goa</option>
-            <option value="gujarat">Gujarat</option>
-            <option value="haryana">Haryana</option>
-            <option value="himachal-pradesh">Himachal Pradesh</option>
-            <option value="jharkhand">Jharkhand</option>
-            <option value="karnataka">Karnataka</option>
-            <option value="kerala">Kerala</option>
-            <option value="madhya-pradesh">Madhya Pradesh</option>
-            <option value="maharashtra">Maharashtra</option>
-            <option value="manipur">Manipur</option>
-            <option value="meghalaya">Meghalaya</option>
-            <option value="mizoram">Mizoram</option>
-            <option value="nagaland">Nagaland</option>
-            <option value="odisha">Odisha</option>
-            <option value="punjab">Punjab</option>
-            <option value="rajasthan">Rajasthan</option>
-            <option value="sikkim">Sikkim</option>
-            <option value="tamil-nadu">Tamil Nadu</option>
-            <option value="telangana">Telangana</option>
-            <option value="tripura">Tripura</option>
-            <option value="uttar-pradesh">Uttar Pradesh</option>
-            <option value="uttarakhand">Uttarakhand</option>
-            <option value="west-bengal">West Bengal</option>
-            <option value="andaman-nicobar-islands">Andaman and Nicobar Islands</option>
-            <option value="chandigarh">Chandigarh</option>
-            <option value="dadra-nagar-haveli-and-daman-and-diu">Dadra and Nagar Haveli and Daman and Diu</option>
-            <option value="delhi">Delhi</option>
-            <option value="lakshadweep">Lakshadweep</option>
-            <option value="puducherry">Puducherry</option>
-            <option value="ladakh">Ladakh</option>
-            <option value="jammu-and-kashmir">Jammu and Kashmir</option>
-        </select>
-        <button type="button" onclick="redirectToScholarship()">Submit</button>
-    </form>
-    </center>
 
-    <br>
-    <br>
-    
+        <section class="scholarship-selection">
+            <h2>Select Your State / Union Territory</h2>
+            <p>Choose your state to be directed to its official scholarship portal.</p>
+            <form id="scholarshipForm" onsubmit="event.preventDefault(); redirectToScholarship();">
+                <select id="stateSelector">
+                    <option value="">-- Select State / UT --</option>
+                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                    <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="chhattisgarh">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="himachal-pradesh">Himachal Pradesh</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="mizoram">Mizoram</option>
+                    <option value="nagaland">Nagaland</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="sikkim">Sikkim</option>
+                    <option value="tamil-nadu">Tamil Nadu</option>
+                    <option value="telangana">Telangana</option>
+                    <option value="tripura">Tripura</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="west-bengal">West Bengal</option>
+                    <option value="andaman-nicobar-islands">Andaman and Nicobar Islands</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="dadra-nagar-haveli-and-daman-and-diu">Dadra &amp; Nagar Haveli and Daman &amp; Diu</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="lakshadweep">Lakshadweep</option>
+                    <option value="puducherry">Puducherry</option>
+                    <option value="ladakh">Ladakh</option>
+                    <option value="jammu-and-kashmir">Jammu and Kashmir</option>
+                </select>
+                <button type="submit">Go to Portal</button>
+            </form>
+        </section>
+    </main>
 
- <br>
- <br>
-
-
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section contact-us">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
-            <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="footer-section about">
-            <h3>About</h3>
-            <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
-        </div>
-        <div class="footer-section follow-us">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="facebook2.png" alt="Facebook" /></a>
-                <a href="#"><img src="twitterx.png" alt="Twitter" /></a>
-                <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
-                <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section about">
+                <h3>About</h3>
+                <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook2.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitterx.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
-    </div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,hi,te,ta,ml,kn',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
-        }
-      </script>
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      
-    
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <script src="script.js"></script>
-    <script>
-        function redirect(page) {
-            window.location.href = page;
-        }
-        
-        function changeLanguage() {
-            const language = document.getElementById('languageSelect').value;
-            // Implement language change functionality here
-            alert("Language changed to " + language);
-        }
-        
-        function search() {
-            const query = document.getElementById('search').value;
-            // Implement search functionality here
-            alert("Searching for: " + query);
-        }
-        const buttons = document.querySelectorAll('.card-button');
-
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        alert('Button clicked: ' + this.parentElement.querySelector('.card-title').textContent);
-    });
-});
-        document.getElementById('stateForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const selectedState = document.getElementById('states').value;
-            window.location.href = `/state/${selectedState}`;
-        });
-        function redirectToScholarship() {
-            const stateSelector = document.getElementById('stateSelector');
-            const selectedValue = stateSelector.value;
-            
-            const scholarshipLinks = {
-                'andhra-pradesh': 'https://jnanabhumi.ap.gov.in/',
-                'arunachal-pradesh': 'https://scholarships.gov.in/',
-                'assam': ' https://dipr.assam.gov.in/ ',
-                'bihar': 'https://www.pmsonline.bih.nic.in/',
-                'chhattisgarh': 'https://postmatric-scholarship.cg.nic.in/',
-                'goa': 'https://cmscholarship.goa.gov.in/',
-                'gujarat': 'https://www.digitalgujarat.gov.in/',
-                'haryana': 'https://harchhatravratti.highereduhry.ac.in/',
-                'himachal-pradesh': 'https://hpepass.cgg.gov.in/',
-                'jharkhand': 'https://ekalyan.cgg.gov.in/',
-                'karnataka': 'https://www.example.com/scholarship-karnataka',
-                'kerala': 'https://dcescholarship.kerala.gov.in/',
-                'madhya-pradesh': 'https://scholarshipportal.mp.nic.in/',
-                'maharashtra': 'https://mahadbt.maharashtra.gov.in/',
-                'manipur': 'https://scholarship.mdmmanipur.in/',
-                'meghalaya': 'https://megeducation.gov.in/',
-                'mizoram': 'https://scholarships.mizoram.gov.in/',
-                'nagaland': 'https://scholarship.nagaland.gov.in/',
-                'odisha': 'https://scholarship.odisha.gov.in/',
-                'punjab': 'https://scholarships.punjab.gov.in/',
-                'rajasthan': 'https://sje.rajasthan.gov.in/',
-                'sikkim': 'https://scholarships.sikkim.gov.in/',
-                'tamil-nadu': 'https://ssp.tn.gov.in/',
-                'telangana': 'https://telanganaepass.cgg.gov.in/',
-                'tripura': 'https://scholarships.gov.in/',
-                'uttar-pradesh': 'https://scholarship.up.gov.in/',
-                'uttarakhand': 'https://he.uk.gov.in/dpages/scholarship-portal',
-                'west-bengal': 'https://scholarships.wbsed.gov.in/',
-                'andaman-nicobar-islands': 'https://eservices.andaman.gov.in/',
-                'chandigarh': 'https://www.chdeducation.gov.in/',
-                'dadra-nagar-haveli-and-daman-and-diu': 'https://dnh.gov.in/',
-                'delhi': 'https://scholarships.gov.in/',
-                'lakshadweep':  'http://scholarships.gov.in',
-                'puducherry': 'https://dhte.py.gov.in/',
-                'ladakh': 'https://scholarships.gov.in/',
-                'jammu-and-kashmir': 'https://www.aicte-jk-scholarship-gov.in/'
-            };
-
-            if (selectedValue && scholarshipLinks[selectedValue]) {
-                window.location.href = scholarshipLinks[selectedValue];
-            } else {
-                alert('Please select a state or union territory.');
-            }
-        }
-        
-        
-    </script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,hi,te,ta,ml,kn',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-          }, 'google_translate_element');
-        }
-      </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

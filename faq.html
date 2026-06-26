@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarship Hub</title>
-    <link rel="stylesheet" href="faq.css">
+    <meta name="description" content="Frequently Asked Questions about scholarships — eligibility, application process, and more.">
+    <title>Scholarship Hub | FAQs</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
     <script src="script.js" defer></script>
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <div class="top-bar">
-            <div class="gov-info">Government of India | Ministry of Electronics & Information Technology | <img src="Digital-India-Color.svg"></div>
-          
-          
-            
+            <div class="gov-info">Government of India | Ministry of Electronics &amp; Information Technology | <img src="Digital-India-Color.svg" alt="Digital India"></div>
+            <div id="google_translate_element" class="language-translator"></div>
         </div>
-        
-        <div id="google_translate_element" class="language-translator"></div>
-
-
-
-
-
-
         <nav class="navbar">
             <div class="logo">
                 <img src="logo1.png" alt="Scholarship Hub Logo">
             </div>
-            <ul>
+<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+<span></span><span></span><span></span>
+</button>
+<ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Scholarship Types</a>
@@ -42,8 +34,8 @@
                         <a href="private1.html">Private</a>
                     </div>
                 </li>
-                <li><a href="scholarship status state.html">Scholarship Status</a></li>
-                <li><a href="#">Announcements</a></li>
+                <li><a href="scholarship-status.html">Scholarship Status</a></li>
+                <li><a href="index.html#announcements">Announcements</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Helpdesk</a>
                     <div class="dropdown-content">
@@ -55,80 +47,69 @@
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search scholarships...">
                 <button id="search-button">Search</button>
-                <div class="search-results" id="search-results">
+                <div class="search-results" id="search-results"></div>
             </div>
-        </div>
-        
         </nav>
     </header>
-    </nav>
-    <div class="content">
-        <h1>Frequently Asked Questions (FAQ)</h1>
-        <div class="faq-section">
-            <div class="faq-item">
-                <h3>What is the Scholarship Portal?</h3>
-                <p>The Scholarship Portal is a platform providing information about various scholarships available for students.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How can I apply for a scholarship?</h3>
-                <p>Each scholarship has its own application process. Please refer to the details provided under each scholarship type for specific instructions.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Who is eligible for scholarships?</h3>
-                <p>Eligibility criteria vary for different scholarships. Please check the individual scholarship details for more information.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I know if I have been awarded a scholarship?</h3>
-                <p>You will be notified via email or through the scholarship portal if you have been awarded a scholarship.</p>
-            </div>
-            <!-- Add more FAQ items as needed -->
-        </div>
-    </div>
-    
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section contact-us">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
-            <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="footer-section about">
-            <h3>About</h3>
-            <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
-        </div>
-        <div class="footer-section follow-us">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="facebook2.png" alt="Facebook" /></a>
-                <a href="#"><img src="twitterx.png" alt="Twitter" /></a>
-                <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
-                <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+
+    <main>
+        <div class="content">
+            <h1>Frequently Asked Questions (FAQ)</h1>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <h3>What is the Scholarship Portal?</h3>
+                    <p>The Scholarship Portal is a centralized platform providing information about various scholarships available for students across India and internationally.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I apply for a scholarship?</h3>
+                    <p>Each scholarship has its own application process. Please navigate to the relevant scholarship type (International, National, State, or Private) and click "Go to Portal" to visit the official scholarship website.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Who is eligible for scholarships?</h3>
+                    <p>Eligibility criteria vary for different scholarships based on category (SC/ST/OBC/General), income, academic merit, state of domicile, and course of study. Please check the individual scholarship portal for specific eligibility requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I know if I have been awarded a scholarship?</h3>
+                    <p>You will be notified via SMS or email registered on the scholarship portal. You can also check your application status using the Scholarship Status page on this portal.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is One Time Registration (OTR)?</h3>
+                    <p>OTR is a unique registration number allotted to students on the National Scholarship Portal (NSP). It is mandatory for applying for any scholarship from AY 2024-25 onwards and can be generated using your Aadhaar number.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What documents are required for scholarship applications?</h3>
+                    <p>Common documents include Aadhaar card, income certificate, caste certificate (if applicable), mark sheets, bank account details (linked with Aadhaar), and a bonafide certificate from your institution.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
-    </div>
-    
-      
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      
-    
-</footer>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,hi,te,ta,ml,kn',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  
-    
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact-us">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@scholarshipportal.com">info@scholarshipportal.com</a></p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section about">
+                <h3>About</h3>
+                <p>Our mission is to provide comprehensive information about scholarships available to students globally.</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook2.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitterx.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
-

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Private Scholarships — Tata, Aditya Birla, Infosys, Reliance, HDFC and more.">
-    <title>Scholarship Hub | Private Scholarships</title>
+    <meta name="description" content="Check your scholarship application status — select your state to track your application.">
+    <title>Scholarship Hub | Scholarship Status</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -62,18 +62,49 @@
         </div>
 
         <section class="scholarship-selection">
-            <h2>Private Scholarships</h2>
-            <p>Select a corporate or NGO scholarship to visit its official portal.</p>
-            <form id="scholarship-form" onsubmit="event.preventDefault(); redirectPrivate();">
-                <select id="scholarship-select">
-                    <option value="">-- Select Scholarship --</option>
-                    <option value="tata_scholarships">Tata Trusts Scholarships</option>
-                    <option value="aditya_birla">Aditya Birla Scholarships</option>
-                    <option value="infosys">Infosys Foundation Scholarships</option>
-                    <option value="reliance">Reliance Foundation Scholarships</option>
-                    <option value="hdfc">HDFC Bank Scholarships</option>
+            <h2>Check Your Scholarship Status</h2>
+            <p>Select your State / Union Territory to track your scholarship application status.</p>
+            <form id="scholarshipForm" onsubmit="event.preventDefault(); redirectToScholarship();">
+                <select id="stateSelector">
+                    <option value="">-- Select State / UT --</option>
+                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                    <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="chhattisgarh">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="himachal-pradesh">Himachal Pradesh</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="mizoram">Mizoram</option>
+                    <option value="nagaland">Nagaland</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="sikkim">Sikkim</option>
+                    <option value="tamil-nadu">Tamil Nadu</option>
+                    <option value="telangana">Telangana</option>
+                    <option value="tripura">Tripura</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="west-bengal">West Bengal</option>
+                    <option value="andaman-nicobar-islands">Andaman and Nicobar Islands</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="dadra-nagar-haveli-and-daman-and-diu">Dadra &amp; Nagar Haveli and Daman &amp; Diu</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="lakshadweep">Lakshadweep</option>
+                    <option value="puducherry">Puducherry</option>
+                    <option value="ladakh">Ladakh</option>
+                    <option value="jammu-and-kashmir">Jammu and Kashmir</option>
                 </select>
-                <button type="submit">Go to Portal</button>
+                <button type="submit">Check Status</button>
             </form>
         </section>
     </main>
